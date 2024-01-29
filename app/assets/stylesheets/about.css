@@ -1,0 +1,56 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+}
+.about-us {
+  max-width: 800px; /* Adjust max-width as needed */
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.about-us h1,
+p {
+  text-align: center;
+}
+.founders {
+  text-align: center;
+}
+.founders-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.founder-container {
+  flex: 1;
+  padding: 30px;
+  border: 3px solid black;
+  box-sizing: border-box;
+  margin: 30px;
+}
+
+.founder-container img {
+  max-width: 50%;
+  height: auto;
+  border: 3px solid black;
+}
+
+.founder-container p {
+  margin-bottom: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.fa-brands.fa-instagram,
+.fa-regular.fa-envelope,
+.fa-brands.fa-linkedin {
+  color: red;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 25px;
+}

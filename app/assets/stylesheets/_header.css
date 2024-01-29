@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif; /* Change 'Your Chosen Font' to the desired font */
+}
+
+.navbar {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 30px 50px;
+  align-items: center;
+}
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.nav-links {
+  flex: 2;
+  text-align: center;
+}
+
+.nav-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 9px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: black;
+  color: white;
+}
+
+.contact-button {
+  flex: 1;
+  text-align: right;
+}
+button {
+  font-family: "Montserrat", sans-serif;
+  padding: 12px 25px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+button:hover {
+  background-color: #464545; /* New color on hover */
+}

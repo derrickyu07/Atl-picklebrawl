@@ -1,0 +1,81 @@
+<div class="merchandise-container">
+  <div class="item-container">
+    <%= image_tag('kevin.png', alt: 'merch-picture', class: 'clickable-image', onclick: 'openModal()') %>
+    <h4> $15</h4>
+  </div>
+  <div class="item-container">
+    <%= image_tag('kevin.png', alt: 'merch-picture', class: 'clickable-image', onclick: 'openModal()') %>
+    <h4>$15</h4>
+  </div>
+  <div class="item-container">
+    <%= image_tag('kevin.png', alt: 'merch-picture', class: 'clickable-image', onclick: 'openModal()') %>
+    <h4>$15</h4>
+  </div>
+</div>
+<div id="modal" class="modal-overlay">
+  <!-- Modal Content -->
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="image-description-container">      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><%= image_tag('kevin.png', alt: 'merch', class: 'image') %></div>
+          <div class="swiper-slide"><%= image_tag('kevin.png', alt: 'merch', class: 'image') %></div>
+          <div class="swiper-slide"><%= image_tag('kevin.png', alt: 'merch', class: 'image') %></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need scrollbar -->
+      </div>
+    </div>
+    <div class="description-container">
+      <h2>Atlanta Picklebrawl t-shirt</h2>
+      <h5>Color: <span>Black</span></h5>
+      <h5>Size: <span>S, M, L, XL</span></h5>
+      <h5>Product Details</h5>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  function openModal() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination', clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+  });
+</script>

@@ -1,0 +1,12 @@
+.pickle-brawl-image {
+  width: 100%;
+  margin: 0;
+  padding: 0 0px; /* Adds 10px padding on left and right */
+}
+
+.pickle-brawl-image img {
+  width: 94%;
+  height: auto; /* To maintain the aspect ratio */
+  display: block; /* Removes extra space below the image */
+  margin: auto;
+}
