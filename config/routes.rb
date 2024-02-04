@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
   get '/about', to: 'home#about'
-  get '/merchandise', to: 'home#merchandise'
+  get '/gallery', to: 'home#gallery'
   get '/contact', to: 'home#contact'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
