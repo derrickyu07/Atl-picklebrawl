@@ -108,7 +108,39 @@
     max-width: 650px;
     margin: 0 auto;
   }
+
   .founders-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .founders {
+    width: 100%;
+  }
+
+  .founders-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .card-container img {
+    width: 100%;
+  }
+
+  .founder h2 {
+    font-size: 1.2rem;
+  }
+
+  .position::after {
+    width: 20%;
+  }
+
+  .social-icons {
+    width: 100%;
   }
 }
