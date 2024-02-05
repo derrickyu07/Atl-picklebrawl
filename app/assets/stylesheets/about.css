@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column; /* Stack items vertically */
+  padding-top: 50px;
 }
 .about-us {
   max-width: 800px; /* Adjust max-width as needed */
@@ -10,47 +11,104 @@
   margin-bottom: 50px;
 }
 .about-us h1,
-p {
+.about-us p {
   text-align: center;
 }
 .founders {
-  text-align: center;
+  width: 1100px;
+  max-height: 100%;
+  margin: 0 auto;
 }
 .founders-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding: 1.5rem 0;
+  margin: 2rem 0;
+  grid-gap: 2rem;
+}
+.card-container {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  background: black;
+  padding: 3rem;
+  box-shadow: 1px 2px 3px black;
+  transition: all 0.9s ease-in-out;
 }
-.founder-container {
-  flex: 1;
-  padding: 30px;
-  border: 3px solid black;
-  box-sizing: border-box;
-  margin: 30px;
+.card-container:hover {
+  transform: translateY(-10px);
 }
-
-.founder-container img {
-  max-width: 50%;
-  height: auto;
-  border: 3px solid black;
+.card-container img {
+  border-radius: 5%;
+  width: 50%;
+  height: 100%;
 }
-
-.founder-container p {
-  margin-bottom: 20px;
+.founder {
+  padding-left: 1rem;
+  font-size: 0.9em;
+}
+.founder h2 {
+  font-size: 1.3rem;
+  color: red;
+}
+.founder p {
+  color: white;
+  padding-bottom: 10px;
+}
+.position {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-left: auto;
+}
+.position::after {
+  content: "";
+  background: #ccc;
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  top: 25px;
+  left: 0;
 }
 .social-icons {
   display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 80%;
+}
+.social-icons span {
+  background: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.social-icons span i {
+  font-size: 1.2rem;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
-  padding: 10px;
+  height: 100%;
+  cursor: pointer;
+  color: black;
+  transition: all 0.3s;
+}
+.social-icons span i:hover {
+  background: black;
+  color: white;
+  border-radius: 50%;
 }
 
-.fa-brands.fa-instagram,
-.fa-regular.fa-envelope,
-.fa-brands.fa-linkedin {
-  color: red;
-  padding: 5px;
-  cursor: pointer;
-  font-size: 25px;
+@media (max-width: 1100px) {
+  .founders {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 962px) {
+  .founders {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .founders-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
