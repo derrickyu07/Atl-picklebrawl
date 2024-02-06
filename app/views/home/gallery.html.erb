@@ -1,35 +1,13 @@
 <section class="grid-gallery">
   <h2 class="title">Polaroid Grid</h2>
   <div class="grid">
-    <div class="grid-item">
-      <a href="#" class="grid-link">
-        <%= image_tag "kevin.png", class: "grid-img"%>
-        <h3 class="grid-item-title">Natural saturation</h3>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="#" class="grid-link">
-        <%= image_tag "kevin.png", class: "grid-img"%>
-        <h3 class="grid-item-title">Natural saturation</h3>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="#" class="grid-link">
-        <%= image_tag "kevin.png", class: "grid-img"%>
-        <h3 class="grid-item-title">Natural saturation</h3>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="#" class="grid-link">
-        <%= image_tag "kevin.png", class: "grid-img"%>
-        <h3 class="grid-item-title">Natural saturation</h3>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="#" class="grid-link">
-        <%= image_tag "kevin.png", class: "grid-img"%>
-        <h3 class="grid-item-title">Natural saturation</h3>
-      </a>
-    </div>
+    <% @tournaments.each do |tournament| %>
+      <div class="grid-item">
+        <a href="<%= tournament.link %>" class="grid-link">
+          <%= image_tag('kevin.png', class: "grid-img") %>
+          <h3 class="grid-item-title"><%= tournament.title %></h3>
+        </a>
+      </div>
+    <% end %>
   </div>
 </section>

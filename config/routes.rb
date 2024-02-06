@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/about', to: 'home#about'
   get '/gallery', to: 'home#gallery'
-  get '/contact', to: 'home#contact'
+  get '/gallery/:id', to: 'home#gallery', as: 'tournament_gallery'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
