@@ -3,10 +3,10 @@
   <div class="grid">
     <% @tournaments.each do |tournament| %>
       <div class="grid-item">
-        <a href="<%= tournament.link %>" class="grid-link">
+        <%= link_to tournament_images_path(tournament), class: "grid-link" do %>
           <%= image_tag('kevin.png', class: "grid-img") %>
           <h3 class="grid-item-title"><%= tournament.title %></h3>
-        </a>
+        <%end%>
       </div>
     <% end %>
   </div>

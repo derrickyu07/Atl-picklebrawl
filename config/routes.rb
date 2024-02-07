@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about'
   get '/gallery', to: 'home#gallery'
   get '/gallery/:id', to: 'home#gallery', as: 'tournament_gallery'
+  get '/tournaments/:id/images', to: 'tournaments#show_images', as: 'tournament_images'
+
+  get 'test_google_cloud_storage_access', to: 'home#test_google_cloud_storage_access'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -1,0 +1,8 @@
+<section class="tournament-images">
+  <h2 class="title"><%= @tournament.title %> Images</h2>
+  <div class="images">
+    <% @images.each do |image_url| %>
+      <%= image_tag(image_url, class: "tournament-image") %>
+    <% end %>
+  </div>
+</section>
