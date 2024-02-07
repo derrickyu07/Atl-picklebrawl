@@ -30,9 +30,11 @@ class TournamentsController < ApplicationController
         bucket = storage.bucket(ENV['GCS_BUCKET'])
     
         # Get files from the specified folder
+
         files = bucket.files(prefix: folder_name)
-    
-        # Get URLs of the files
-        files.map { |file| file.public_url }
+        image_files = files.select { |file| file.name.downcase.end_with?('.jpg', '.jpeg', '.png', '.gif', '.bmp') }
+
+        # Get URLs of the image files
+        image_files.map { |file| file.public_url }
       end
-end
+    end
