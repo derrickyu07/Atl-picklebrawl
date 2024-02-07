@@ -5,12 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-.grid-gallery .title {
-  color: white;
-  padding: 90px 0 40px;
-  font-size: 80px;
-  font-weight: 700;
+  padding-top: 20px;
 }
 
 .grid-gallery .grid {
@@ -44,10 +39,12 @@
   position: relative;
   margin: 0;
   padding: 22px 10px;
-  color: gray;
+  color: black;
   background-color: white;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
+  font-family: "Sedgwick Ave", cursive;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
