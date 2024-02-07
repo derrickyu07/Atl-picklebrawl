@@ -7,3 +7,5 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+tournament1 = Tournament.create(title: 'Test_Tournament1', link: 'link1')
+tournament2 = Tournament.create(title: 'Test_Tournament2', link: 'link2')

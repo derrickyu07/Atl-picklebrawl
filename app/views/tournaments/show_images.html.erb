@@ -1,0 +1,13 @@
+<section class="tournament-photos">
+  <div class="photo-gallery">
+    <% @images.each_slice((@images.size / 3.0).ceil) do |image_column| %> <!-- Split images into columns -->
+      <div class="column">
+        <% image_column.each do |image_url| %>
+          <div class="photo">
+            <%= image_tag(image_url, alt: 'photo') %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
